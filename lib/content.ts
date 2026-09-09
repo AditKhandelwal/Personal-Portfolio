@@ -239,8 +239,8 @@ export const experience: Role[] = [
 
 export const about = {
   paragraphs: [
-    "I'm a software engineer focused on AI agents and machine learning. I like building things end to end, and I tend to learn a tool by shipping something small with it rather than reading about it.",
-    "Away from work it's fantasy novels, games, and usually something new I'm partway through learning.",
+    "I'm a software engineer focused on AI agents and machine learning, which in my case overlap more than the labels suggest: an agent usually grows a data pipeline behind it, and a computer-vision idea turns into a model I have to train and evaluate. I like owning a project end to end, and I usually pick up a new tool by building something small and real with it instead of reading the docs cover to cover.",
+    "That carries over outside of work. I read a lot of fantasy, keep a games backlog I don't keep up with, and there's usually something new I'm partway through learning. Right now that's Japanese, at JLPT N4.",
   ],
   education: {
     school: "University of California, Merced",
