@@ -239,7 +239,7 @@ export const experience: Role[] = [
 
 export const about = {
   paragraphs: [
-    "I'm a software engineer focused on AI agents and machine learning. I like building things end to end, from a rough idea through to something that runs and holds up, and I usually learn a new tool by shipping something small with it rather than reading about it first. I'm comfortable across the stack, from the model and the data behind it to the interface someone actually uses, and I lean toward small, dependency-light builds I can reason about.",
+    "I'm a software engineer focused on AI agents and machine learning. I like building things end to end, and I usually learn a new tool by shipping something small with it rather than reading about it first.",
   ],
   education: {
     school: "University of California, Merced",
