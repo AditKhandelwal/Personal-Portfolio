@@ -1,4 +1,5 @@
 import { hero, profile } from "@/lib/content";
+import RotatingText from "./RotatingText";
 
 export default function Hero() {
   return (
@@ -15,8 +16,9 @@ export default function Hero() {
           {profile.location}
         </p>
 
-        <h1 className="mt-7 max-w-[680px] font-display font-medium leading-[1.08] tracking-[-0.02em] text-heading [font-size:clamp(2.2rem,5.6vw,3.9rem)]">
-          {hero.headline}
+        <h1 className="mt-7 flex max-w-[900px] flex-wrap items-baseline gap-x-[0.28em] font-display font-medium leading-[1.1] tracking-[-0.02em] text-heading [font-size:clamp(2.2rem,5.6vw,3.9rem)]">
+          <span>{hero.prefix}</span>
+          <RotatingText items={hero.rotating} />
         </h1>
 
         <p className="mt-8 max-w-[46ch] text-[16px] leading-[1.75] text-muted sm:text-[17px]">

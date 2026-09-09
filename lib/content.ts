@@ -14,8 +14,14 @@ export const profile = {
 };
 
 export const hero = {
-  headline:
-    "Software engineer focused on AI, machine learning, and computer vision.",
+  prefix: "Building",
+  rotating: [
+    "AI agents",
+    "computer-vision systems",
+    "ML pipelines",
+    "LLM tooling",
+    "full-stack apps",
+  ],
   sub: "Recent CS grad from UC Merced, open to 2026 engineering roles.",
 };
 
