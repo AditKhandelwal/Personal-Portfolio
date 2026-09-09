@@ -29,6 +29,9 @@ export default function Hero() {
           <a href="#work" className="link-underline text-ink">
             Projects &darr;
           </a>
+          <a href="#experience" className="link-underline text-ink">
+            Experience
+          </a>
           <a href={`mailto:${profile.email}`} className="link-underline text-ink">
             Email
           </a>
