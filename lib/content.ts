@@ -188,6 +188,14 @@ export const experience: Role[] = [
       "Built a retrieval-augmented natural-language-to-SQL pipeline that let non-technical staff query sales and marketing data in plain English. RAG over the schema and example queries kept generations grounded; prompt engineering and error handling cut failed queries; Ollama and Phi-4-mini behind FastAPI kept it fast enough for near-real-time use.",
   },
   {
+    title: "Contract Software Engineer, Agentic Benchmark Design",
+    org: "DataAnnotation",
+    location: "Remote",
+    dates: "Aug 2026 – Present",
+    blurb:
+      "Design SWE-bench-style benchmarks for evaluating AI coding agents, across licensed open-source repos in TypeScript, Python, and Java. For each: take a real bug or missing feature, stand up a reproducible Docker environment, and write the hidden pytest / JUnit / Jest suite that grades a candidate fix. Calibrate difficulty by running coding agents against the benchmark and reading their failure modes, so it meaningfully separates strong agents from weak ones.",
+  },
+  {
     title: "Undergraduate Researcher",
     org: "SmartGrid Laboratory",
     location: "Merced, CA",
