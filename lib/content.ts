@@ -260,7 +260,7 @@ export const about = {
   },
   facts: [
     { label: "Based in", value: "Bay Area, CA · open to relocating" },
-    { label: "Focus", value: "AI agents · computer vision · backend · full-stack" },
+    { label: "Focus", value: "AI agents · backend · full-stack · computer vision" },
     { label: "Languages", value: "English · Hindi · Japanese (JLPT N4)" },
   ],
 };
