@@ -239,8 +239,8 @@ export const experience: Role[] = [
 
 export const about = {
   paragraphs: [
-    "I'm most interested in the last mile of ML: the part where a model stops being a notebook cell and becomes something someone relies on. In practice the unglamorous decisions are the work: which tools an agent can call, what data it's allowed to see, how fast a response comes back before people stop using it.",
-    "My side projects are all things I actually use: an agent for a game I play, a tutor for the Japanese I'm studying (JLPT N4). Building for real users, even a handful, forces every decision a demo lets you skip.",
+    "I'm a software engineer focused on AI agents and machine learning. I like building things end to end, and I tend to learn a tool by shipping something small with it rather than reading about it.",
+    "Away from work it's fantasy novels, games, and usually something new I'm partway through learning.",
   ],
   education: {
     school: "University of California, Merced",
