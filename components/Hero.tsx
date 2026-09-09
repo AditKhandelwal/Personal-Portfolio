@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[86vh] scroll-mt-24 flex-col justify-center py-24"
+      className="relative flex min-h-[74vh] scroll-mt-24 flex-col justify-center pb-14 pt-24"
     >
       {/* Soft radial scrim so the headline reads over the star field without a hard box. */}
       <div className="hero-scrim" aria-hidden />
@@ -36,11 +36,11 @@ export default function Hero() {
             R&eacute;sum&eacute;
           </a>
         </div>
-      </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-label text-faint">
-        <span className="h-px w-10 bg-faint/50" />
-        the field tracks your cursor
+        <div className="mt-14 flex items-center gap-4 font-mono text-[11px] text-faint">
+          <span className="h-px w-10 bg-hairline" />
+          Currently designing coding-agent benchmarks at DataAnnotation
+        </div>
       </div>
     </section>
   );
