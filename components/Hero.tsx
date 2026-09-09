@@ -32,14 +32,14 @@ export default function Hero() {
           <a href={`mailto:${profile.email}`} className="link-underline text-ink">
             Email
           </a>
-          <a href={profile.links.resume} className="link-underline text-ink">
+          <a
+            href={profile.links.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="link-underline text-ink"
+          >
             R&eacute;sum&eacute;
           </a>
-        </div>
-
-        <div className="mt-14 flex items-center gap-4 font-mono text-[11px] text-faint">
-          <span className="h-px w-10 bg-hairline" />
-          Currently designing coding-agent benchmarks at DataAnnotation
         </div>
       </div>
     </section>

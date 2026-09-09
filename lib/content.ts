@@ -3,7 +3,7 @@
 export const profile = {
   name: "Adit Khandelwal",
   role: "Software Engineer",
-  status: "Open to 2026 roles",
+  status: "Open to full-time roles",
   location: "Bay Area, CA",
   email: "adit.khandelwal@gmail.com",
   links: {
@@ -22,7 +22,7 @@ export const hero = {
     "LLM tooling",
     "full-stack apps",
   ],
-  sub: "Recent CS grad from UC Merced, open to 2026 engineering roles.",
+  sub: "Recent CS grad from UC Merced, open to full-time engineering roles.",
 };
 
 /* ---------------------------------------------------------------- Projects */
