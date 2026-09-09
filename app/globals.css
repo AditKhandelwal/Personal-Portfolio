@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Single committed theme: a dark star map. */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: #08080a;
+  color: #ededea;
+}
+
+/* Hairline rule used between list rows. */
+.rule {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Underlined link that firms up on hover. */
+.link-underline {
+  border-bottom: 1px solid rgba(237, 237, 234, 0.28);
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.link-underline:hover {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid #5fd08a;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
