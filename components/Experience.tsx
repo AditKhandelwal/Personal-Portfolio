@@ -13,7 +13,7 @@ export default function Experience() {
             <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
               <h3 className="text-[15px] text-ink">
                 {r.title}
-                <span className="text-muted"> — {r.org}</span>
+                <span className="text-muted">, {r.org}</span>
               </h3>
               <span className="shrink-0 font-mono text-[12px] tabular-nums text-faint">
                 {r.location}

@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aditk.com"),
-  title: `${profile.name} — ${profile.role}`,
+  title: `${profile.name} · ${profile.role}`,
   description:
     "Adit Khandelwal builds AI agents and computer-vision systems and takes them the whole way to the people who use them.",
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} · ${profile.role}`,
     description:
       "AI agents, computer vision, and the full stack around them.",
     url: "https://aditk.com",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.role}`,
+    title: `${profile.name} · ${profile.role}`,
     description:
       "AI agents, computer vision, and the full stack around them.",
   },

@@ -15,8 +15,8 @@ export const profile = {
 
 export const hero = {
   headline:
-    "I build AI agents and computer-vision systems — and take them the whole way to the people who use them.",
-  sub: "Recent CS graduate from UC Merced. Currently shipping a tool-calling agent to real players and shaving latency off on-device models.",
+    "I build the software around AI models: tool-calling agents, on-device vision, and the full stack that makes them usable.",
+  sub: "Recent CS grad from UC Merced. Recent work: a live Claude agent for Wuthering Waves players, real-time vision at a wine-tech startup, and an adaptive Japanese tutor.",
 };
 
 /* ---------------------------------------------------------------- Projects */
@@ -55,24 +55,24 @@ export const projects: {
       year: "2026",
       context: "Personal project",
       tagline:
-        "A personalized build assistant for the action-RPG Wuthering Waves — it reasons over each player's real roster, echo inventory, and saved builds to answer team-composition and progression questions in plain language.",
+        "A personalized build assistant for the action RPG Wuthering Waves. It reasons over each player's real roster, echo inventory, and saved builds to answer team-composition and progression questions in plain language.",
       detail:
-        "A raw Claude tool-calling agent (ReAct loop, four structured tools) runs as a single Supabase Edge Function — JWT-scoped so no query crosses users, streamed over SSE, no agent framework. Final character stats are recomputed server-side so the model compares set bonuses instead of raw IDs. A YOLO model exported to TensorFlow.js (99.5% mAP50) reads a screenshot to import an echo loadout in one step; a 30× latency regression fixed along the way (9.6s → 0.3s).",
+        "A hand-written Claude agent runs as a Supabase Edge Function: a ReAct tool-calling loop with four tools that read the player's own roster, saved builds, and character data under their auth scope. Every answer is grounded in that account's data instead of generic guide advice. Character stats are recomputed server-side so the model compares set bonuses rather than raw item IDs.",
       stack: ["React", "TypeScript", "Supabase Edge", "Claude API", "TensorFlow.js"],
       repo: "https://github.com/AditKhandelwal/Wuthering-Waves-Assistant",
       demo: "https://wuthering-waves-assistant.vercel.app/",
     },
     {
-      name: "Sensei AI — Adaptive Japanese Tutor",
+      name: "Sensei AI",
       kind: "AI agent · full-stack",
       mark: "先生AI",
       jp: true,
       year: "2026",
       context: "Personal project",
       tagline:
-        "A full-stack Japanese tutor that adapts every lesson to what you've actually mastered.",
+        "A full-stack Japanese tutor that reshapes every session around what you have actually retained.",
       detail:
-        "A Claude-powered ReAct agent selects review items, generates lessons, and grades open-ended answers in real time. A custom Bayesian Knowledge Tracing model tracks per-item mastery across 57k+ curriculum items and feeds live learner state back to the agent. A dual-model pipeline — Sonnet for generation, Haiku for grading — is streamed over SSE to balance quality against latency and cost.",
+        "A Claude agent (Sonnet for teaching, Haiku for grading) drives each session through a ReAct loop with seven tools. A custom Bayesian Knowledge Tracing model keeps a p_know estimate for every one of ~57k vocab, kanji, and grammar items and updates it after each answer; the agent reads that state to choose what to review and what to introduce. One item pool feeds every mode, so vocab and kana SRS drills, kanji, grammar fill-ins, reading passages, and sentence writing all update the same model of what you know.",
       stack: ["Python", "FastAPI", "PostgreSQL", "React", "Claude API"],
       repo: "https://github.com/AditKhandelwal/Japanese-Learning-Agent-Platform",
       demo: null,
@@ -86,7 +86,7 @@ export const projects: {
       tagline:
         "A Discord bot that brings UC Merced professor ratings into chat with a single slash command.",
       detail:
-        "/rmp <name> resolves a professor through Rate My Professors' GraphQL API and returns a clean embed — department, would-take-again, difficulty, top tags, and recent reviews. A companion scraper builds the legacy-ID map the lookup depends on.",
+        "/rmp <name> resolves a professor through Rate My Professors' GraphQL API and returns a clean embed: department, would-take-again, difficulty, top tags, and recent reviews. A companion scraper builds the legacy-ID map the lookup depends on.",
       stack: ["Python", "discord.py", "GraphQL", "BeautifulSoup"],
       repo: "https://github.com/AditKhandelwal/UCM-Rate-My-Professor-Bot",
       demo: null,
@@ -94,26 +94,26 @@ export const projects: {
   ],
   more: [
     {
-      name: "Craigslist Used-Car Condition Classification",
+      name: "Craigslist Used-Car Classification",
       year: "2025",
       blurb:
-        "A classical-ML pipeline classifying vehicle condition from 242K Craigslist listings — feature engineering, rare-category bucketing, imputation, and a tuned gradient-boosting model (74.4% accuracy, 0.55 macro-F1).",
+        "A classical-ML pipeline classifying vehicle condition from 242K Craigslist listings. Feature engineering, rare-category bucketing, and imputation feed a tuned gradient-boosting model (74.4% accuracy, 0.55 macro-F1).",
       stack: ["Python", "scikit-learn", "pandas", "NumPy"],
       repo: null,
     },
     {
-      name: "Tabletop PDA — Blackjack CV Assistant",
+      name: "Blackjack CV Assistant",
       year: "2024",
       blurb:
-        "A real-time table assistant: OpenCV and ArUco tags localize cards in 6-DoF while a multithreaded PyQt5 dashboard runs a basic-strategy rules engine and calls hit or stand.",
+        "A real-time table assistant. OpenCV and ArUco tags localize cards in 6-DoF while a multithreaded PyQt5 dashboard runs a basic-strategy rules engine and calls hit or stand.",
       stack: ["Python", "OpenCV", "PyQt5", "NumPy"],
       repo: null,
     },
     {
-      name: "Spot-It Object Classification",
+      name: "Spot-It Symbol Classifier",
       year: "2025",
       blurb:
-        "A YOLOv5 classifier for the symbols on Spot-it cards — 800+ images annotated in Roboflow and trained through its AutoML pipeline. 98.8% accuracy and first place in the course competition.",
+        "A YOLOv5 classifier for the symbols on Spot-it cards. 800+ images annotated in Roboflow and trained through its AutoML pipeline; 98.8% accuracy and first place in the course competition.",
       stack: ["Python", "Roboflow", "TensorFlow", "OpenCV"],
       repo: null,
     },
@@ -169,31 +169,15 @@ export type Role = {
   blurb: string;
 };
 
-// Reverse-chronological by end date.
+// Ordered by relevance to the roles Adit is targeting, not strictly by date.
 export const experience: Role[] = [
-  {
-    title: "ServiceNow Student Technology Consultant",
-    org: "UC Merced, Office of Information Technology",
-    location: "Merced, CA",
-    dates: "Jul 2024 – Jan 2026",
-    blurb:
-      "Built production ServiceNow request forms and workflow automations for campus IT, scoping each release with staff stakeholders and closing 100+ cross-departmental tickets on an Agile cycle. My first taste of shipping software inside a large organization.",
-  },
-  {
-    title: "Undergraduate Researcher",
-    org: "SmartGrid Laboratory",
-    location: "Merced, CA",
-    dates: "Jan 2025 – Dec 2025",
-    blurb:
-      "Deployed thermal-sensor networks across classrooms and labs and wrote the Python pipelines that cleaned, labeled, and timestamped 10k+ frames of occupancy data — validated against ground truth to feed occupancy-forecasting models.",
-  },
   {
     title: "Software Engineer, Computer Vision",
     org: "Owligator",
     location: "San Francisco, CA",
     dates: "May 2025 – Nov 2025",
     blurb:
-      "Built a real-time CV pipeline on Luxonis DepthAI cameras: YOLOv8 label detection plus OCR to pull structured metadata off wine bottles, a PyTorch U-Net for label segmentation, and a multi-signal matcher (geometry + text similarity + IDs) that deduplicated inventory automatically.",
+      "Built a real-time CV pipeline on Luxonis DepthAI cameras: YOLOv8 label detection plus OCR to pull structured metadata off wine bottles, a PyTorch U-Net for label segmentation, and a multi-signal matcher (blob geometry, OCR text similarity, custom IDs) that deduplicated inventory automatically.",
   },
   {
     title: "Software Engineer Intern",
@@ -201,7 +185,15 @@ export const experience: Role[] = [
     location: "Fremont, CA",
     dates: "Jun 2025 – Aug 2025",
     blurb:
-      "Built a natural-language-to-SQL pipeline that let non-technical staff query sales and marketing data in plain English. Spent most of the time on making it trustworthy — prompt engineering and error handling to cut failed queries — and fast enough for near-real-time use with Ollama + Phi-4-mini behind FastAPI.",
+      "Built a retrieval-augmented natural-language-to-SQL pipeline that let non-technical staff query sales and marketing data in plain English. RAG over the schema and example queries kept generations grounded; prompt engineering and error handling cut failed queries; Ollama and Phi-4-mini behind FastAPI kept it fast enough for near-real-time use.",
+  },
+  {
+    title: "Undergraduate Researcher",
+    org: "SmartGrid Laboratory",
+    location: "Merced, CA",
+    dates: "Jan 2025 – Dec 2025",
+    blurb:
+      "Built the Python pipelines that cleaned, labeled, and timestamped 10k+ frames of occupancy data from thermal sensor networks across campus classrooms and labs, then trained a linear regression model to 97% accuracy on occupancy prediction. Started an EnergyPlus simulation as the bridge to a live system: I got as far as a hardcoded rules-based HVAC controller to exercise the simulation loop, with the end goal of the regression model reading live sensor data to auto-adjust HVAC in real buildings.",
   },
   {
     title: "Software Engineer Intern (Capstone)",
@@ -209,7 +201,7 @@ export const experience: Role[] = [
     location: "Merced, CA",
     dates: "Jan 2025 – May 2025",
     blurb:
-      "Senior capstone: a Power Apps + Dataverse fuel-logging tool for a 25+ vehicle fleet, plus a Power BI dashboard and automated PDF reports. Worked directly with the CEO on scope and presented the finished build at UC Merced's Innovate to Grow.",
+      "Senior capstone: a Power Apps and Dataverse fuel-logging tool for a 25+ vehicle fleet, plus a Power BI dashboard and automated PDF reports. Worked directly with the CEO on scope and presented the finished build at UC Merced's Innovate to Grow.",
   },
   {
     title: "Front-End Developer Intern",
@@ -217,7 +209,15 @@ export const experience: Role[] = [
     location: "Remote",
     dates: "Oct 2024 – Jan 2025",
     blurb:
-      "Shipped a media-rich “Stories” feature for a student social app in React Native + TypeScript, wired to Firebase / Firestore for real-time upload and playback, building to Figma specs with a small cross-functional team.",
+      "Shipped a media-rich “Stories” feature for a student social app in React Native and TypeScript, wired to Firebase and Firestore for real-time upload and playback, building to Figma specs with a small cross-functional team.",
+  },
+  {
+    title: "ServiceNow Student Technology Consultant",
+    org: "UC Merced, Office of Information Technology",
+    location: "Merced, CA",
+    dates: "Jul 2024 – Jan 2026",
+    blurb:
+      "Built production ServiceNow request forms and workflow automations for campus IT (UI policies, client scripts, Flow Designer), scoping each release with staff stakeholders and closing 100+ cross-departmental tickets on an Agile cycle.",
   },
 ];
 
@@ -225,8 +225,8 @@ export const experience: Role[] = [
 
 export const about = {
   paragraphs: [
-    "I care most about the last mile — the stretch where a model stops being a notebook and becomes something a person actually uses. Lately that has meant tool-calling agents, knowledge tracing, and computer-vision models small enough to run in a browser tab.",
-    "I studied Computer Science & Engineering at UC Merced and have worked across computer vision, applied ML, and internal tooling — at an SF startup, an AI lab, and a research lab on campus.",
+    "I'm most interested in the last mile of ML: the part where a model stops being a notebook cell and becomes something someone relies on. In practice the unglamorous decisions are the work: which tools an agent can call, what data it's allowed to see, how fast a response comes back before people stop using it.",
+    "My side projects are all things I actually use: an agent for a game I play, a tutor for the Japanese I'm studying (JLPT N4). Building for real users, even a handful, forces every decision a demo lets you skip.",
   ],
   education: {
     school: "University of California, Merced",
@@ -246,7 +246,7 @@ export const about = {
   },
   facts: [
     { label: "Based in", value: "Bay Area, CA · open to relocating" },
-    { label: "Focus", value: "AI agents · computer vision · full-stack" },
+    { label: "Focus", value: "AI agents · computer vision · backend · full-stack" },
     { label: "Languages", value: "English · Hindi · Japanese (JLPT N4)" },
   ],
 };
