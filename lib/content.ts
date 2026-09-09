@@ -15,8 +15,8 @@ export const profile = {
 
 export const hero = {
   headline:
-    "I build the software around AI models: tool-calling agents, on-device vision, and the full stack that makes them usable.",
-  sub: "Recent CS grad from UC Merced. Recent work: a live Claude agent for Wuthering Waves players, real-time vision at a wine-tech startup, and an adaptive Japanese tutor.",
+    "Software engineer focused on AI, machine learning, and computer vision.",
+  sub: "Recent CS grad from UC Merced, open to 2026 engineering roles.",
 };
 
 /* ---------------------------------------------------------------- Projects */

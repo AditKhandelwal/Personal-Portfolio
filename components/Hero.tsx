@@ -12,12 +12,10 @@ export default function Hero() {
       <div className="relative">
         <p className="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-label text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          {profile.role}
-          <span className="text-faint">/</span>
           {profile.location}
         </p>
 
-        <h1 className="mt-7 max-w-[15ch] font-display font-medium leading-[1.06] tracking-[-0.02em] text-heading [font-size:clamp(2.4rem,6.2vw,4.25rem)]">
+        <h1 className="mt-7 max-w-[680px] font-display font-medium leading-[1.08] tracking-[-0.02em] text-heading [font-size:clamp(2.2rem,5.6vw,3.9rem)]">
           {hero.headline}
         </h1>
 
@@ -27,7 +25,7 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-[14px]">
           <a href="#work" className="link-underline text-ink">
-            Selected work &darr;
+            Projects &darr;
           </a>
           <a href={`mailto:${profile.email}`} className="link-underline text-ink">
             Email
