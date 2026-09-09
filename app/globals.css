@@ -27,6 +27,27 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* CJK stack for the Sensei AI project mark — no web font, relies on the OS. */
+.font-jp {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Yu Gothic UI", "Meiryo", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+}
+
+/* Faint dot grid on the generated project covers, faded from the lower-left. */
+.cover-grid {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(
+    130% 110% at 12% 100%,
+    #000 0%,
+    transparent 72%
+  );
+  mask-image: radial-gradient(130% 110% at 12% 100%, #000 0%, transparent 72%);
+}
+
 /* Soft radial darkening behind the hero copy so it holds over the star field. */
 .hero-scrim {
   position: absolute;

@@ -3,7 +3,7 @@ import { profile } from "@/lib/content";
 
 export default function Contact() {
   return (
-    <Section id="contact" label="Elsewhere">
+    <Section id="contact" label="Contact">
       <h2 className="font-display text-[28px] font-medium tracking-[-0.015em] text-heading sm:text-[33px]">
         Let&rsquo;s build something.
       </h2>
