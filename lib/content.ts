@@ -240,7 +240,6 @@ export const experience: Role[] = [
 export const about = {
   paragraphs: [
     "I'm a software engineer focused on AI agents and machine learning. I like building things end to end, from a rough idea through to something that runs and holds up, and I usually learn a new tool by shipping something small with it rather than reading about it first.",
-    "Outside of work it's mostly fantasy books, games, and whatever I'm currently learning, which right now is Japanese (JLPT N4).",
   ],
   education: {
     school: "University of California, Merced",
