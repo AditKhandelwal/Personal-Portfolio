@@ -30,6 +30,12 @@ export default function SelectedWork() {
             </>
           );
 
+          const shell =
+            "group relative -mx-4 block rounded-lg px-4 py-6 transition-colors duration-200 hover:bg-white/[0.025]";
+          const bar = (
+            <span className="absolute inset-y-4 left-0 w-px origin-top scale-y-0 bg-accent/70 transition-transform duration-300 ease-out group-hover:scale-y-100" />
+          );
+
           return (
             <li key={w.name} className="rule first:border-t-0">
               {w.href ? (
@@ -37,12 +43,16 @@ export default function SelectedWork() {
                   href={w.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="group block py-6"
+                  className={shell}
                 >
+                  {bar}
                   {inner}
                 </a>
               ) : (
-                <div className="group block py-6">{inner}</div>
+                <div className={shell}>
+                  {bar}
+                  {inner}
+                </div>
               )}
             </li>
           );

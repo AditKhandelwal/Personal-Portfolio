@@ -77,7 +77,7 @@ export default function Starfield() {
         });
       }
       glyphs = [];
-      for (let j = 0; j < 12; j++) {
+      for (let j = 0; j < 16; j++) {
         glyphs.push({
           bx: rnd(0, W),
           by: rnd(0, H),
@@ -125,6 +125,10 @@ export default function Starfield() {
       const parX = pointer.px * 42;
       const parY = pointer.py * 42;
 
+      // Stars close to the cursor this frame — used for the constellation lines.
+      const LINK = 150;
+      const near: { x: number; y: number; d: number }[] = [];
+
       for (let i = 0; i < stars.length; i++) {
         const s = stars[i];
         s.bx += s.vx * MO;
@@ -146,14 +150,45 @@ export default function Starfield() {
             x += (dx / d) * f;
             y += (dy / d) * f;
           }
+          if (d < LINK && s.z > 0.4 && near.length < 7) {
+            near.push({ x, y, d });
+          }
         }
 
+        // Field is a touch brighter up top, easing off toward the footer.
+        const yf = 1 - 0.4 * Math.min(1, Math.max(0, y / H));
         const tw = 0.72 + 0.28 * Math.sin(T * 2 + s.tw);
-        ctx!.globalAlpha = (0.22 + 0.55 * s.z) * tw;
+        ctx!.globalAlpha = (0.22 + 0.55 * s.z) * tw * yf;
         ctx!.fillStyle = s.blue ? "#B2C6FF" : "#FFFFFF";
         ctx!.beginPath();
         ctx!.arc(x, y, 0.35 + 1.5 * s.z, 0, 6.2832);
         ctx!.fill();
+      }
+
+      // Constellation: link the cursor to nearby stars, and those stars to
+      // each other. Lines fade with distance — the whole thing only appears
+      // where the pointer is.
+      if (pointer.has && near.length > 1) {
+        ctx!.lineWidth = 1;
+        for (let a = 0; a < near.length; a++) {
+          const p = near[a];
+          ctx!.globalAlpha = (1 - p.d / LINK) * 0.28;
+          ctx!.strokeStyle = "#9DB2FF";
+          ctx!.beginPath();
+          ctx!.moveTo(ptr.x, ptr.y);
+          ctx!.lineTo(p.x, p.y);
+          ctx!.stroke();
+          for (let b = a + 1; b < near.length; b++) {
+            const q = near[b];
+            const dd = Math.hypot(p.x - q.x, p.y - q.y);
+            if (dd > LINK) continue;
+            ctx!.globalAlpha = (1 - dd / LINK) * 0.14;
+            ctx!.beginPath();
+            ctx!.moveTo(p.x, p.y);
+            ctx!.lineTo(q.x, q.y);
+            ctx!.stroke();
+          }
+        }
       }
 
       for (let i = 0; i < glyphs.length; i++) {
@@ -168,7 +203,7 @@ export default function Starfield() {
 
         const x = g.bx - parX * g.z * 2.3;
         const y = g.by - parY * g.z * 2.3;
-        ctx!.globalAlpha = 0.05 + 0.11 * g.z;
+        ctx!.globalAlpha = 0.08 + 0.16 * g.z;
         ctx!.fillStyle = "#D2DCFF";
         ctx!.font = `${(11 + 15 * g.z).toFixed(1)}px ${monoFamily}`;
         ctx!.save();
