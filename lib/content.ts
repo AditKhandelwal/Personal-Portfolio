@@ -239,7 +239,7 @@ export const experience: Role[] = [
 
 export const about = {
   paragraphs: [
-    "I'm a software engineer and a CS graduate from UC Merced. I work mainly on AI agents and machine learning: designing and evaluating tool-calling agents, training models, and building the full-stack apps around them. I'm currently looking for full-time engineering work.",
+    "I'm Adit, a software engineer currently focused on building agentic AI systems. From LLM tool-calling agents to the evaluation infrastructure that tests them. I recently graduated from UC Merced with a degree in Computer Science and Engineering, and I like building things people actually use: an AI tutor that adapts to how you learn, an assistant that reasons over your own game data instead of generic guides. Currently based in the Bay Area, open to opportunities anywhere within the US.",
   ],
   education: {
     school: "University of California, Merced",
@@ -258,7 +258,6 @@ export const about = {
     ],
   },
   facts: [
-    { label: "Based in", value: "Bay Area, CA · open to relocating" },
     { label: "Focus", value: "AI agents · backend · full-stack · computer vision" },
     { label: "Languages", value: "English · Hindi · Japanese (JLPT N4)" },
   ],
