@@ -99,7 +99,7 @@ export const projects: {
       blurb:
         "A classical-ML pipeline classifying vehicle condition from 242K Craigslist listings — feature engineering, rare-category bucketing, imputation, and a tuned gradient-boosting model (74.4% accuracy, 0.55 macro-F1).",
       stack: ["Python", "scikit-learn", "pandas", "NumPy"],
-      repo: "https://github.com/AmanKalkat/cse-176-proj",
+      repo: null,
     },
     {
       name: "Tabletop PDA — Blackjack CV Assistant",
@@ -107,7 +107,7 @@ export const projects: {
       blurb:
         "A real-time table assistant: OpenCV and ArUco tags localize cards in 6-DoF while a multithreaded PyQt5 dashboard runs a basic-strategy rules engine and calls hit or stand.",
       stack: ["Python", "OpenCV", "PyQt5", "NumPy"],
-      repo: "https://github.com/vvoffsec/TabletopPDAProject",
+      repo: null,
     },
     {
       name: "Spot-It Object Classification",

@@ -1,8 +1,0 @@
-Drop your résumé PDF in this folder named exactly:
-
-    Adit_Khandelwal_Resume.pdf
-
-The "Résumé" link (components/Contact.tsx / lib/content.ts -> profile.links.resume)
-points at /Adit_Khandelwal_Resume.pdf, which is this folder.
-
-You can delete this .txt file once the PDF is in place.
