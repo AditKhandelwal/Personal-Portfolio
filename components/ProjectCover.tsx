@@ -16,7 +16,7 @@ export default function ProjectCover({
     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/[0.08] bg-[#0b0b10]">
       <div className="cover-grid absolute inset-0" aria-hidden />
       <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-6">
-        <span className="font-mono text-[10px] uppercase tracking-label text-faint">
+        <span className="font-mono text-[0.625rem] uppercase tracking-label text-faint">
           {kind}
         </span>
         <span

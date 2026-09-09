@@ -13,12 +13,17 @@ export default function Home() {
   return (
     <>
       <Starfield />
-      <div className="relative mx-auto max-w-[1120px] px-4 pb-24 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[70rem] px-4 pb-24 sm:px-6 lg:px-8">
         <TopBar />
 
         <Hero />
 
         <main className="space-y-4 sm:space-y-6">
+          <Reveal>
+            <Panel>
+              <About />
+            </Panel>
+          </Reveal>
           <Reveal>
             <Panel>
               <Projects />
@@ -32,11 +37,6 @@ export default function Home() {
           <Reveal>
             <Panel>
               <Experience />
-            </Panel>
-          </Reveal>
-          <Reveal>
-            <Panel>
-              <About />
             </Panel>
           </Reveal>
           <Reveal>

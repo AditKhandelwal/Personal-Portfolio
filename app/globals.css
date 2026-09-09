@@ -9,6 +9,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Fluid base: type and every rem-based size scale gently with the viewport,
+     with a rem floor/ceiling so browser zoom and font preferences still work. */
+  font-size: clamp(0.9rem, 0.82rem + 0.42vw, 1.15rem);
 }
 
 @media (prefers-reduced-motion: reduce) {

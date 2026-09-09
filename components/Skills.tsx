@@ -50,13 +50,13 @@ const ICONS: Record<string, SimpleIcon> = {
 function Item({ label }: { label: string }) {
   const icon = ICONS[label];
   return (
-    <span className="inline-flex items-center gap-2 text-[13px] text-muted transition-colors hover:text-ink">
+    <span className="inline-flex items-center gap-2 text-[0.8125rem] text-muted transition-colors hover:text-ink">
       {icon ? (
         <svg
           role="img"
           viewBox="0 0 24 24"
           aria-hidden
-          className="h-[15px] w-[15px] shrink-0 fill-current opacity-75"
+          className="h-[0.9375rem] w-[0.9375rem] shrink-0 fill-current opacity-75"
         >
           <path d={icon.path} />
         </svg>
@@ -74,7 +74,7 @@ export default function Skills() {
       <div className="grid gap-x-12 gap-y-9 sm:grid-cols-2">
         {skillGroups.map((g) => (
           <div key={g.name}>
-            <h3 className="font-mono text-[10px] uppercase tracking-label text-faint">
+            <h3 className="font-mono text-[0.625rem] uppercase tracking-label text-faint">
               {g.name}
             </h3>
             <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3">

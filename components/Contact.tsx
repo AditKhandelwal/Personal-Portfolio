@@ -4,18 +4,18 @@ import { profile } from "@/lib/content";
 export default function Contact() {
   return (
     <Section id="contact" label="Contact">
-      <h2 className="font-display text-[28px] font-medium tracking-[-0.015em] text-heading sm:text-[33px]">
+      <h2 className="font-display text-[clamp(1.6rem,1.2rem+1.6vw,2.0625rem)] font-medium tracking-[-0.015em] text-heading">
         Let&rsquo;s build something.
       </h2>
       <p className="mt-4">
         <a
           href={`mailto:${profile.email}`}
-          className="link-underline text-[18px] text-ink"
+          className="link-underline text-[1.125rem] text-ink"
         >
           {profile.email}
         </a>
       </p>
-      <div className="mt-6 flex gap-6 text-[14px]">
+      <div className="mt-6 flex gap-6 text-[0.875rem]">
         <a
           href={profile.links.github}
           target="_blank"
@@ -41,7 +41,7 @@ export default function Contact() {
           Résumé
         </a>
       </div>
-      <p className="mt-14 font-mono text-[11px] text-faint">
+      <p className="mt-14 font-mono text-[0.6875rem] text-faint">
         {profile.location} &nbsp;&middot;&nbsp; &copy; {new Date().getFullYear()}
       </p>
     </Section>
